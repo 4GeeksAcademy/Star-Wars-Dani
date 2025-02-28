@@ -1,40 +1,80 @@
-
-.body{
-    background-color:  black;
+body {
+  background-color: black;
+  color: white;
+  height: 100%;
+  margin: 0;
+}
+.head .icon {
+  width: 50px;
+  height: 50px;
+}
+/* ----------------------------- 
+   home Styles
+   ----------------------------- */
+.home-conteiner {
+  margin-top: 5px;
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
+/* ----------------------------- 
+   footer Styles
+   ----------------------------- */
 
+.footer .card {
+  background-color: black;
+  margin-top: auto;
+}
 
+/* ----------------------------- 
+   Navbar Styles
+   ----------------------------- */
 
-.navbar-style{
-    background-color: black;
-  }
+.navbar-style .nav-link {
+    position: relative;
+    z-index: 1; 
+  color: white !important;
+  background-color: black;
+}
 
-  .navbar-style .dropdown-menu .dropdown-item{
-    background-color: black;
-  }
-  
-  .navbar-style .navbar-brand,
-  .navbar-style, .nav-link, .navbar-toggler-icon{
+.navbar-style .dropdown-menu .dropdown-item {
     color: white;
-  }
-  
-  .navbar-style .nav-link:hover {
-    color: white; 
-    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; 
-  }
-  .navbar-style .nav-link .navbar-toggler-icon{
-    color: white; 
-  }
-  
-  .navbar-style .navbar-toggler {
-    border-color: white;
-  }
+  background-color: black;
+}
 
-  .navbar-style .btn{
-    border-color: white;
-    color: white;
-  }
-  .navbar-style .btn:hover{
-    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; 
-  }
+.navbar-style .navbar-brand,
+.navbar-style,
+.nav-link,
+.navbar-toggler-icon {
+  color: white;
+}
+
+.navbar-style .nav-link:hover {
+  color: white;
+  text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px  white;
+  z-index: 2;
+}
+.navbar-style .nav-link .navbar-toggler-icon {
+  color: white;
+}
+
+.navbar-style .navbar-toggler {
+  border-color: white;
+}
+
+.navbar-style .btn {
+  border-color: white;
+  color: white;
+}
+.navbar-style .btn:hover {
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+  z-index: 2;
+}
+
+/* ----------------------------- 
+   otros Styles
+   ----------------------------- */

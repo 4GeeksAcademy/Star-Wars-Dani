@@ -1,11 +1,19 @@
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Check the <a target="_blank" href="https://4geeks.com/docs/start/start-react-advanced-project">template documentation</a> <i class="fa-solid fa-file"></i> for help.
-		</p>
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
-	</footer>
+
+
+  <footer className="footer  py-0 text-center">
+    <div class="card">
+      <div class="card-header">Featured</div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+        <a href="#" class="btn btn-primary">
+          Go somewhere
+        </a>
+      </div>
+    </div>
+
+  </footer>
 );
