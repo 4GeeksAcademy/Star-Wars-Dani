@@ -41,34 +41,23 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Favorite
                 </a>
                 <ul className="dropdown-menu">
+
                   <li className="dropdown-item">
                     <Link className="dropdown-item" to="/action">
-                      Action
+                    Action
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/another-action">
                       Another action
                     </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/something-else">
-                      Something else here
-                    </Link>
-                  </li>
+                  </li> 
                 </ul>
               </li>
-              <li className="nav-item">
-                <span className="nav-link disabled" aria-disabled="true">
-                  Disabled
-                </span>
-              </li>
+              
             </ul>
             <form className="d-flex" role="search">
               <input
