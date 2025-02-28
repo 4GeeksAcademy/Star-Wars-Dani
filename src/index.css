@@ -4,6 +4,8 @@
 }
 
 
+
+
 .navbar-style{
     background-color: black;
   }
@@ -12,10 +14,8 @@
     background-color: black;
   }
   
-  
-
   .navbar-style .navbar-brand,
-  .navbar-style .nav-link .navbar-toggler-icon{
+  .navbar-style, .nav-link, .navbar-toggler-icon{
     color: white;
   }
   
@@ -23,12 +23,9 @@
     color: white; 
     text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; 
   }
-  .navbar-style .nav-link {
+  .navbar-style .nav-link .navbar-toggler-icon{
     color: white; 
   }
-  
-
-
   
   .navbar-style .navbar-toggler {
     border-color: white;
