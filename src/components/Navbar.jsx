@@ -20,10 +20,13 @@ const Navbar = () => {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
+
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
+
                 <Link className="nav-link active" to="/">
                   Home
                 </Link>
@@ -33,6 +36,7 @@ const Navbar = () => {
                   About
                 </Link>
               </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -43,25 +47,26 @@ const Navbar = () => {
                 >
                   Favorite
                 </a>
-                <ul className="dropdown-menu">
 
-                  <li className="dropdown-item">
+                <ul className="dropdown-menu">
+                  <li>
                     <Link className="dropdown-item" to="/action">
-                    Action
+                      cosa 1
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/another-action">
-                      Another action
+                      cosa 2
                     </Link>
-                  </li> 
+                  </li>
                 </ul>
               </li>
-              
+
             </ul>
+
             <form className="d-flex" role="search">
               <input
-                className="form-control me-2"
+                className="form-control me-4"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
