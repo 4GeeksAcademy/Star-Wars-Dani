@@ -1,17 +1,19 @@
-import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import React from "react";
+import Slider from "../components/Slider";
 
-
-export const Home = () => {
-
-	const { store, dispatch } = useGlobalReducer()
-
+const Home = () => {
 	return (
-		<div className="home-conteiner">
+		<div>
+			<h2>Personajes</h2>
+			<Slider dataType="characters" />
 
-			<h1>Star Wars!</h1>
-			<p>
-				<img src="https://raw.githubusercontent.com/4GeeksAcademy/Star-Wars-Dani/refs/heads/master/src/components/Images/StarWars.png " />
-			</p>
+			<h2>Planetas</h2>
+			<Slider dataType="planets" />
+
+			<h2>Vehículos</h2>
+			<Slider dataType="vehicles" />
 		</div>
 	);
-}; 
+};
+
+export default Home;

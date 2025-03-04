@@ -1,32 +1,33 @@
-export const initialStore=()=>{
-  return{
-    message: null,
-    todos: [
-      {
-        id: 1,
-        title: "Make the bed",
-        background: null,
-      },
-      {
-        id: 2,
-        title: "Do my homework",
-        background: null,
+import { SWAPI_URL } from "./Constants"; // Import the SWAPI_URL constant from Constants.js
+
+const getState = ({ getStore, getActions, setStore }) => {
+  return {
+    store: {
+      people: [],
+      planets: [],
+      starships: [],
+      vehicles: [],
+    },
+
+    actions: {
+      getDa: async ( type ) => {
+        try {
+          
+          if (!["people", "planets", "starships", "vehicles"].includes(type)) {
+            throw new Error("Tipo de dato no válido.");
+          }
+        
+          const response = await fetch(`${SWAPI_URL}/${type}`);
+          const data = await response.json();
+
+          setStore({ [type]: data.results });
+        } catch (error) {
+          console.error("Error al descargar la información", error);
+        
       }
-    ]
-  }
-}
+    },
+    },
+  };
+};
 
-export default function storeReducer(store, action = {}) {
-  switch(action.type){
-    case 'add_task':
-
-      const { id,  color } = action.payload
-
-      return {
-        ...store,
-        todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
-      };
-    default:
-      throw Error('Unknown action.');
-  }    
-}
+export default getState;
