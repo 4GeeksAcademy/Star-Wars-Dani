@@ -1,25 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import "./styles/index.css";
-import { RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";  
+import { StoreProvider } from "./store";  
 import AppContextProvider from "./appContextProvider";
-import { router } from "./routes";
-import { StoreProvider } from './hooks/useGlobalReducer';
-
+import Home from "./pages/Home";
+import { Single } from "./pages/Single";
 
 
 const Main = () => {
-    return (
-        <React.StrictMode>
-            <router>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/todo/:theId" component={Single} />
-                </Switch>
-            </router>
-        </React.StrictMode>
-    );
-}
+  return (
+    <React.StrictMode>
+      <StoreProvider>
+        <AppContextProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/single/:theId" element={<Single />} />
+            </Routes>
+          </Router>
+        </AppContextProvider>
+      </StoreProvider>
+    </React.StrictMode>
+  );
+};
 
-// Render the Main component into the root DOM element.
-ReactDOM.createRoot(document.getElementById('root')).render(<Main />)
+// Renderizar en el root de la aplicación
+ReactDOM.createRoot(document.getElementById("root")).render(<Main />);

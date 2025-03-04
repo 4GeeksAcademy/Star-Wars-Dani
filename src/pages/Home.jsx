@@ -4,6 +4,10 @@ import Slider from "../components/Slider";
 const Home = () => {
 	return (
 		<div>
+
+			
+			<h1>Star Wars</h1>
+
 			<h2>Personajes</h2>
 			<Slider dataType="characters" />
 
