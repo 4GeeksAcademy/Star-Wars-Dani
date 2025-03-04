@@ -1,4 +1,4 @@
-import { SWAPI_URL } from "./Constants"; // Import the SWAPI_URL constant from Constants.js
+import { SWAPI_URL } from "./Constants";
 
 const getState = ({ getStore, getActions, setStore }) => {
   return {
@@ -10,22 +10,20 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
 
     actions: {
-      getDa: async ( type ) => {
+      getDa: async (type) => {
         try {
-          
           if (!["people", "planets", "starships", "vehicles"].includes(type)) {
             throw new Error("Tipo de dato no válido.");
           }
-        
+
           const response = await fetch(`${SWAPI_URL}/${type}`);
           const data = await response.json();
 
           setStore({ [type]: data.results });
         } catch (error) {
           console.error("Error al descargar la información", error);
-        
-      }
-    },
+        }
+      },
     },
   };
 };
