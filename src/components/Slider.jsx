@@ -4,7 +4,14 @@ import Card from "./Card";
 import '../styles/slider.css';
 
 const Slider = () => {
-    const { getData, store, dataType } = useContext(Context);  
+    const { getData, store, dataType, setDataType } = useContext(Context);
+    
+useEffect(() => {
+    console.log("dataType recibido en Slider:", dataType);
+    if (getData && dataType) {
+        getData(dataType);
+    }
+}, [dataType, getData]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
