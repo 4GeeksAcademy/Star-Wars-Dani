@@ -1,5 +1,5 @@
-body {
-  background-color: black;
+ body {
+  background-color: rgb(113, 110, 110);
   color: cyan;
   height: 100%;
   margin: 0;
@@ -16,7 +16,7 @@ body {
   border-top: 1px solid white;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   align-items: center;
 }
@@ -24,11 +24,9 @@ body {
 /* ----------------------------- 
    footer Styles
    ----------------------------- */
+  
 
-.footer .card {
-  background-color: black;
-  margin-top: auto;
-}
+
 
 /* ----------------------------- 
    Navbar Styles
