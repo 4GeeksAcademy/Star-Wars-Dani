@@ -11,13 +11,12 @@ import { StoreProvider } from './hooks/useGlobalReducer';
 const Main = () => {
     return (
         <React.StrictMode>
-            <AppContextProvider> {/* ESTO ES MI CONTEXTO */}
-                <StoreProvider>
-                    {/* Set up routing for the application */}
-                    <RouterProvider router={router}>
-                    </RouterProvider>
-                </StoreProvider>
-            </AppContextProvider>
+            <router>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/todo/:theId" component={Single} />
+                </Switch>
+            </router>
         </React.StrictMode>
     );
 }

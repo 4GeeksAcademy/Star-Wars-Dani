@@ -4,3 +4,4 @@ export const SWAPI_URL = {
   starship: "https://www.swapi.tech/api/starships/",
   vehicle: "https://www.swapi.tech/api/vehicles/",
 };
+
